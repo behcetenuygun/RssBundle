@@ -53,7 +53,7 @@ class RssGenerator
         $height->appendChild($this->dom->createTextNode('55'));
 
         $description = $this->dom->createElement('description');
-        $description->appendChild($this->dom->createTextNode('Enuygun.com Güncel Makaleler'));
+        $description->appendChild($this->dom->createTextNode($this->configs['link']));
 
         $link = $this->dom->createElement('link');
         $link->appendChild($this->dom->createTextNode($this->configs['link']));
