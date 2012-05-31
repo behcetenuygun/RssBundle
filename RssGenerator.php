@@ -43,10 +43,16 @@ class RssGenerator
         $url = $this->dom->createElement('url');
         $url->appendChild($this->dom->createTextNode($this->configs['image']));
 
+        $link = $this->dom->createElement('link');
+        $link->appendChild($this->dom->createTextNode('http://www.enuygun.com'));
+
+        $description = $this->dom->createElement('description');
+        $description->appendChild($this->dom->createTextNode('http://www.enuygun.com'));
+
         $image = $this->dom->createElement('image');
         $image->appendChild($url);
-        $image->appendChild($this->dom->createElement('description')->appendChild($this->dom->createTextNode('Enugyun.com')));
-        $image->appendChild($this->dom->createElement('link')->appendChild($this->dom->createTextNode('http://www.enuygun.com')));
+        $image->appendChild($description);
+        $image->appendChild($link);
 
         $channel->appendChild($image);
 
