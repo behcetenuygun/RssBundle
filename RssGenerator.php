@@ -44,7 +44,7 @@ class RssGenerator
         $url->appendChild($this->dom->createTextNode($this->configs['image']));
 
         $title = $this->dom->createElement('title');
-        $title->appendChild($this->dom->createTextNode('Enuygun.com Bilgi'));
+        $title->appendChild($this->dom->createTextNode($this->configs['link']));
 
         $width = $this->dom->createElement('width');
         $width->appendChild($this->dom->createTextNode('238'));
