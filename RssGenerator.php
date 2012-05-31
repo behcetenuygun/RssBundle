@@ -44,7 +44,7 @@ class RssGenerator
         $url->appendChild($this->dom->createTextNode($this->configs['image']));
 
         $title = $this->dom->createElement('title');
-        $title->appendChild($this->dom->createTextNode('Enuygun.com'));
+        $title->appendChild($this->dom->createTextNode('Enuygun.com Bilgi'));
 
         $width = $this->dom->createElement('width');
         $width->appendChild($this->dom->createTextNode('238'));
@@ -53,10 +53,10 @@ class RssGenerator
         $height->appendChild($this->dom->createTextNode('55'));
 
         $description = $this->dom->createElement('description');
-        $description->appendChild($this->dom->createTextNode('http://www.enuygun.com'));
+        $description->appendChild($this->dom->createTextNode('Enuygun.com Bilgi'));
 
         $link = $this->dom->createElement('link');
-        $link->appendChild($this->dom->createTextNode('http://www.enuygun.com'));
+        $link->appendChild($this->dom->createTextNode($this->configs['link']));
 
         $image = $this->dom->createElement('image');
         $image->appendChild($url);
