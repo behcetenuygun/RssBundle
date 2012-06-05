@@ -53,10 +53,10 @@ class RssGenerator
         $height->appendChild($this->dom->createTextNode('33'));
 
         $description = $this->dom->createElement('description');
-        $description->appendChild($this->dom->createTextNode('http://www.enuygun.com'));
+        $description->appendChild($this->dom->createTextNode($this->configs['link']));
 
         $link = $this->dom->createElement('link');
-        $link->appendChild($this->dom->createTextNode('http://www.enuygun.com'));
+        $link->appendChild($this->dom->createTextNode($this->configs['link']));
 
         $image = $this->dom->createElement('image');
         $image->appendChild($url);
