@@ -30,7 +30,7 @@ class RssGenerator
         $channel = $this->dom->createElement('channel');
 
         // Channel infos
-        $tags = array('title', 'description', 'language', 'webMaster', 'link', 'copyright', 'generator', 'icon');
+        $tags = array('title', 'description', 'language', 'webMaster', 'link', 'copyright', 'generator');
         foreach ($tags as $tag) {
             $elem = $this->dom->createElement($tag);
             $text = $this->dom->createTextNode($this->configs[$tag]);
@@ -44,13 +44,13 @@ class RssGenerator
         $url->appendChild($this->dom->createTextNode($this->configs['image']));
 
         $title = $this->dom->createElement('title');
-        $title->appendChild($this->dom->createTextNode('Enuygun.com'));
+        $title->appendChild($this->dom->createTextNode($this->configs['title']));
 
         $width = $this->dom->createElement('width');
-        $width->appendChild($this->dom->createTextNode('238'));
+        $width->appendChild($this->dom->createTextNode('144'));
 
         $height = $this->dom->createElement('height');
-        $height->appendChild($this->dom->createTextNode('55'));
+        $height->appendChild($this->dom->createTextNode('33'));
 
         $description = $this->dom->createElement('description');
         $description->appendChild($this->dom->createTextNode('http://www.enuygun.com'));

@@ -29,7 +29,6 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('link')->end()
                 ->scalarNode('copyright')->end()
                 ->scalarNode('image')->end()
-                ->scalarNode('icon')->end()
                 ->scalarNode('generator')->end()
                     ->arrayNode('item')
                         ->children()
